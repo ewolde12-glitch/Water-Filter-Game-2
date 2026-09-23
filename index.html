@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Water Filter Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Game Container -->
+    <div class="game-container">
+
+        <h1>💧 Water Filter Game</h1>
+
+        <p class="instructions">
+            Click the 💧 Water to earn points.
+            Avoid 🦠 Germs and never click 🗑️ Trash!
+        </p>
+
+        <!-- Game Information -->
+        <div class="game-info">
+
+            <div class="info-box">
+                <h3>Score</h3>
+                <p id="score">0</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Time</h3>
+                <p id="timer">30</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Goal</h3>
+                <p>300</p>
+            </div>
+
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+
+            <div class="progress-label">
+                Water Level
+            </div>
+
+            <div class="progress-background">
+                <div id="water-progress"></div>
+            </div>
+
+        </div>
+
+        <!-- Start Button -->
+        <button id="start-button">Start Game</button>
+
+        <!-- Game Area -->
+        <div id="game-area">
+
+            <button class="game-icon water" data-type="water">
+                💧
+            </button>
+
+            <button class="game-icon germ" data-type="germ">
+                🦠
+            </button>
+
+            <button class="game-icon trash" data-type="trash">
+                🗑️
+            </button>
+
+        </div>
+
+        <div id="winScreen" class="win-screen">
+    <div class="win-message">
+        <div class="water-drop">💧</div>
+        <h1>You Win! 🎉</h1>
+        <p>Great job! You helped make the water clean!</p>
+        <button onclick="restartGame()">Play Again</button>
+    </div>
+</div>
+
+        <!-- Message Area -->
+        <div id="message"></div>
+
+        <!-- Play Again Button -->
+        <button id="play-again" class="hidden">
+            Play Again
+        </button>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
